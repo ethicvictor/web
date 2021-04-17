@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+    www:
+        image: php:7.3-apache
+        ports: 
+            - "8009:80"
+        volumes:
+            - ./src/:/var/www/html/
+        networks:
+            - default
+volumes:
+    persistent:
